@@ -1,7 +1,7 @@
 use enum_from_strings::roles_enum;
 
 fn main() {
-    roles_enum!(Roler);
+    roles_enum!(Roles);
 
-    println!("{:?}", Roler::mariachi_music);
+    println!("{:?}", Roles::tyler);
 }

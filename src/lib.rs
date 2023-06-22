@@ -25,5 +25,6 @@ pub async fn roles_enum(enum_name: TokenStream) -> TokenStream {
 }
 
 fn error<T: Display>(e: T) -> TokenStream {
-    format!("compile_error!(r#\"{e}\"#)").parse().unwrap()
+    let error = e.to_string();
+    quote::quote!(compile_error!(#error)).into()
 }
